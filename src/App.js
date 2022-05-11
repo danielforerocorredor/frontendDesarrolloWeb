@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import EnvioMasivo from './elements/EnvioMasivo';
+import EnviarPaquete from './elements/EnviarPaquete';
+import Estado from './elements/Estado';
+import MarcarEstado from './elements/MarcarEstado';
+import EnvioAsociado from './elements/EnvioAsociado';
+import Nav from './elements/Nav';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Nav />
+        <Routes>
+          <Route path="/enviarPaquete" exact element={<EnviarPaquete />} />
+          <Route path="/estado" exact element={<Estado />} />
+          <Route path="/marcarEstado" exact element={<MarcarEstado />} />
+          <Route path="/envioAsociado" exact element={<EnvioAsociado />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
