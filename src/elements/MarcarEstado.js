@@ -45,7 +45,7 @@ function MarcarEstado(){
         console.log("---");
         console.log(query);
         let result = await fetch(
-          'http://localhost:10013/cambiar-estado',{
+          'https://taller2web.herokuapp.com/cambiar-estado',{
             method: "POST",
             body: JSON.stringify(query),
             headers: {

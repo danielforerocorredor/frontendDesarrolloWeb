@@ -45,7 +45,7 @@ function EnvioAsociado(){
         console.log("---");
         console.log(query);
         let result = await fetch(
-          'http://localhost:10013/consultar-envios',{
+          'https://taller2web.herokuapp.com/consultar-envios',{
             method: "POST",
             body: JSON.stringify(query),
             headers: {

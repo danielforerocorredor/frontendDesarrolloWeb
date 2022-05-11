@@ -55,7 +55,7 @@ function EnviarPaquete(){
         console.log("---");
         console.log(query);
         let result = await fetch(
-          'http://localhost:10013/enviarPaquete',{
+          'https://taller2web.herokuapp.com/enviarPaquete',{
             method: "POST",
             body: JSON.stringify(query),
             headers: {

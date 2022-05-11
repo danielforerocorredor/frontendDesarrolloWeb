@@ -50,7 +50,7 @@ function Estado(){
         console.log("---");
         console.log(query);
         let result = await fetch(
-          'http://localhost:10013/estado-envio',{
+          'https://taller2web.herokuapp.com/estado-envio',{
             method: "POST",
             body: JSON.stringify(query),
             headers: {
